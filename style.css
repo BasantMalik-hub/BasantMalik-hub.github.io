@@ -1,15 +1,16 @@
+/* make the default browser border disappear */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-
+/* body part */
 body{
     background-color: #fff;
     padding: 20px;
 }
-
+/* for the nav bar */
 .navbar{
     display: flex;
     align-items: center;
@@ -18,18 +19,6 @@ body{
     background-color: white;
     max-width: 14000px;
     margin: 0 auto;
-}
-
-.logo{
-    display: flex;
-    align-items: baseline;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 38px;
-    color: #000;
-    letter-spacing: -2px;
-
 }
 .logo img{
     height: 28px;
@@ -83,9 +72,280 @@ body{
     cursor: pointer;
     text-decoration: none;
 }
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+/* product layout */
+.underline{
+    text-decoration: underline;
+    text-decoration-color: red;
 }
+.section {
+    padding: 40px 5%;
+    background-color: white; 
+    color: black;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.section-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.section-header .highlight {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
+}
+.view-all {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: 600;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    background: #fafafa;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #eee;
+    position: relative;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.card-image {
+    position: relative;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-image img {
+    max-width: 70%;
+    max-height: 100%;
+}
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 0 4px 4px 0;
+    z-index: 2;
+}
+.playback-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1c40f;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.rating {
+    background: white;
+    padding: 0 4px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+.card-details {
+    padding: 15px;
+}
+.card-details h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.price-container {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.current-price {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.discount {
+    color: #27ae60; 
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.color-options {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+.dot.black { background-color: black; }
+.dot.blue { background-color: navy; }
+.dot.yellow{background-color: #f1c66b;}
+.dot.grey{background-color: #3f5c6c;}
+
+.more-colors {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.add-btn {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: #333;
+}
+.footer {
+    padding: 60px 40px;
+    color: #000;
+    position: relative;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* --- Left Section: Brand & Input --- */
+
+.footer-brand {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+.footer-brand h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+/* --- Right Section: Links --- */
+.footer-links-wrapper {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.link-column h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.link-column ul {
+    list-style: none;
+}
+
+.link-column ul li {
+    margin-bottom: 12px;
+}
+
+.link-column ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 14px;
+    transition: 0.2s;
+}
+.shop-section {
+    padding: 40px;
+    flex: 2; 
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+/* Responsive Design for Mobile */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .footer-links-wrapper {
+        flex-direction: column;
+    }
+    
+    .shop-grid {
+        grid-template-columns: 1fr; 
+    }
+    .search-bar{
+        display: none;
+    }
+}
+
+/* --- HAMBURGER MENU STYLES --- */
+
+/* 1. Hide the checkbox and hamburger icon by default (Desktop) */
+#menu-toggle, .hamburger {
+    display: none;
+}
+/* 2. Mobile Specific Styles (Break-point at 768px) */
+@media (max-width: 768px) {
+        .hamburger {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 5px;
+    }
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        z-index: 100;
+        gap: 15px;
+    }
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}
+
 
