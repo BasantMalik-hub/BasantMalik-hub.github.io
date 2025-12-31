@@ -212,6 +212,7 @@ body{
 .dot.blue { background-color: navy; }
 .dot.yellow{background-color: #f1c66b;}
 .dot.grey{background-color: #3f5c6c;}
+.dot.red{background-color: #c02529;}
 
 .more-colors {
     font-size: 0.8rem;
